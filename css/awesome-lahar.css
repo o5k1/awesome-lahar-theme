@@ -1,0 +1,98 @@
+body {
+    color: #636363;
+    line-height: 1.4;
+    background: white;
+    font-family: 'franklin-gothic-urw', 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans', sans-serif;
+    font-weight: 300;
+}
+
+.header, .header__logo, .header__menu, .header__search {
+    float: left;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+}
+
+.header__logo img {
+    width: 100px;
+    height: auto;
+}
+
+.header__menu {
+    width: calc(100% - 375px);
+}
+
+.header__menu ul {
+    list-style: none;
+    float: left;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.header__menu li a:hover {
+    color: indianred !important;
+}
+
+.header__menu li {
+    float: left;
+    margin: 0 15px;
+}
+
+.header__menu li a {
+    text-decoration: none !important;
+}
+
+.header__search {
+    position: absolute;
+    right: 0;
+}
+
+.home-grid {
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.home-grid__cell {
+    width: calc(20% - 16px);
+    margin: 8px;
+    font-size: 13px;
+    min-width: 240px;
+    flex: 1;
+    box-shadow: 0 3px 11px 2px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.home-cell__thumbnail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.home-cell__thumbnail img {
+    width: 100%;
+}
+
+.home-cell__title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.home-cell__content {
+    position: relative;
+    margin-top: 100px;
+    padding: 0 16px;
+    background: white;
+}
+
+.home-cell__excerpt {
+    text-align: justify;
+}
+
+.footer {
+    float: left;
+}
+
