@@ -1,0 +1,126 @@
+body {
+    color: #636363;
+    line-height: 1.4;
+    background: white;
+    font-family: 'franklin-gothic-urw', 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans', sans-serif;
+    font-weight: 300;
+}
+
+.header, .header__logo, .header__menu, .header__search {
+    float: left;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+}
+
+.header__logo img {
+    width: 100px;
+    height: auto;
+}
+
+.header__menu {
+    width: calc(100% - 375px);
+}
+
+.header__menu ul {
+    list-style: none;
+    float: left;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.header__menu li a:hover {
+    color: indianred !important;
+}
+
+.header__menu li {
+    float: left;
+    margin: 0 15px;
+}
+
+.header__menu li a {
+    text-decoration: none !important;
+}
+
+.header__search {
+    position: absolute;
+    right: 0;
+}
+
+.home-grid {
+    width: 90%;
+    margin: auto;
+}
+
+.home-grid__cell {
+    font-size: 13px;
+    min-width: 240px;
+    position: relative;
+    text-decoration: none;
+    color: rgb(21, 21, 21);
+    float: left;
+    display: block;
+    width: calc(25% - 20px);
+    padding-bottom: calc(25% - 20px);
+    margin: 10px;
+}
+
+.home-grid__cell:hover .home-grid__cell-post {
+    transform: translate(8px, 8px);
+}
+
+.home-post__thumbnail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.home-post__thumbnail img {
+    width: 100%;
+    background: yellow;
+    height: auto;
+}
+
+.home-post__title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.home-post__content {
+    position: relative;
+    margin-top: 40%;
+    padding: 0 16px;
+    background: white;
+    height: 60%;
+    overflow-y: hidden;
+}
+
+.home-post__excerpt {
+    text-align: justify;
+}
+
+.home-grid__cell-shadow {
+    background: black;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.home-grid__cell-post {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: violet;
+    transition: .1s ease-in;
+    border: 2px solid black;
+}
+.footer {
+    float: left;
+}
+
