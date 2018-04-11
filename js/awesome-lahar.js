@@ -1,3 +1,11 @@
 jQuery(document).ready(function () {
-  console.log('EMEDED');
+
+
+  jQuery('.home-grid').masonry({
+    // options
+    itemSelector: '.home-grid__cell',
+    columnWidth: '.home-grid__cell',
+    percentPosition: true
+  });
+
 });
