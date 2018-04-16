@@ -9,6 +9,7 @@
  * Add scripts to index's head/footer.
  */
 function lahar_enqueue_scripts() {
+	wp_enqueue_style('garamond-font', 'https://fonts.googleapis.com/css?family=EB+Garamond');
 	wp_enqueue_style('lato-font', 'https://fonts.googleapis.com/css?family=Lato:300,400');
 	wp_enqueue_style('dosis-font', 'https://fonts.googleapis.com/css?family=Dosis');
 	wp_enqueue_style( 'reset-style', get_template_directory_uri() . '/css/reset.css' );
