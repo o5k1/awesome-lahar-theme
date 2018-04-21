@@ -35,8 +35,14 @@ function lahar_theme_setup() {
 		'primary-nav' => __( 'Primary navigation' ),
 		'social-menu'  => __( 'Social links menu' )
 	) );
+
+	/**
+	 * Permette di associare un tag ai post di tipo "attachment".
+	 */
+	register_taxonomy_for_object_type( 'post_tag', 'attachment' );
 }
 
 add_action( 'init', 'lahar_theme_setup' );
+
 
 
