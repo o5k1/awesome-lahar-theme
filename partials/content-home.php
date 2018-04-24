@@ -1,3 +1,10 @@
+<div class="issue-cover">
+	<?php $terms = apply_filters( 'taxonomy-images-get-terms', '' , array(
+	        'term_args' => ['term_taxonomy_id' => 505]
+    ));
+	print wp_get_attachment_image( $terms[0]->image_id, 'medium' );
+	?>
+</div>
 <div class="home__current-category">
     <h1 class="home__current-category-name">#39 - Roberto Baggio</h1>
 </div>

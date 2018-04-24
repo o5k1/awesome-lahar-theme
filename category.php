@@ -1,20 +1,26 @@
 <?php get_header(); ?>
     <div class="body">
 		<?php get_search_form(); ?>
+        <div class="issue-cover">
+	        <?php print apply_filters( 'taxonomy-images-queried-term-image', '', array(
+		        'image_size' => 'full'
+	        ) ); ?>
+        </div>
         <div class="home__current-category">
-            <h1 class="home__current-category-name"><?php global $cat; echo get_cat_name($cat)?></h1>
+            <h1 class="home__current-category-name">#<?php global $cat;
+				echo get_cat_name( $cat ) ?></h1>
         </div>
         <div class="home-grid">
-		    <?php
-		    global $post;
-		    $args = array( 'category' => $cat, 'posts_per_page' => - 1 );
+			<?php
+			global $post;
+			$args = array( 'category' => $cat, 'posts_per_page' => - 1 );
 
-		    $articles = get_posts( $args );
-		    $images   = get_posts( array( 'category' => $cat, 'posts_per_page' => - 1, 'post_type' => 'attachment' ) );
-		    $myposts  = array_merge( $articles, $images );
-		    shuffle( $myposts );
-		    foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-			    <?php if ( $post->post_type === 'attachment' ) { ?>
+			$articles = get_posts( $args );
+			$images   = get_posts( array( 'category' => $cat, 'posts_per_page' => - 1, 'post_type' => 'attachment' ) );
+			$myposts  = array_merge( $articles, $images );
+			shuffle( $myposts );
+			foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+				<?php if ( $post->post_type === 'attachment' ) { ?>
                     <a href="<?php the_permalink() ?>" class="home-grid__cell">
                         <div class="home-grid__cell-shadow"></div>
                         <div class="home-grid__cell-post">
@@ -23,7 +29,7 @@
                             </div>
                         </div>
                     </a>
-			    <?php } else { ?>
+				<?php } else { ?>
                     <a href="<?php the_permalink() ?>" class="home-grid__cell">
                         <div class="home-grid__cell-shadow"></div>
                         <div class="home-grid__cell-post">
@@ -33,9 +39,9 @@
                             </div>
                         </div>
                     </a>
-			    <?php } ?>
-		    <?php endforeach;
-		    wp_reset_postdata(); ?>
+				<?php } ?>
+			<?php endforeach;
+			wp_reset_postdata(); ?>
         </div>
     </div>
 <?php get_footer(); ?>

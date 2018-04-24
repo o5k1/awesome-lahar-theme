@@ -79,7 +79,7 @@ a {
 .header__menu li a {
     text-decoration: none !important;
     font-weight: 400;
-    color: rgba(0,0,0,0.9);
+    color: rgba(0, 0, 0, 0.9);
 }
 
 .header__search {
@@ -91,18 +91,26 @@ a {
     text-align: center;
     text-transform: uppercase;
     padding: 40px 0;
-    color: rgba(0,0,0,0.9);
+    color: rgba(0, 0, 0, 0.9);
     font-family: 'Dosis', sans-serif;
+    transition: .8s linear;
+    opacity: 0;
+}
+
+.home__current-category--show {
+    opacity: 1;
 }
 
 .body {
     position: relative;
     margin-top: 80px;
+    padding: 48px 0;
 }
 
 .home-grid {
     width: calc(100% - 120px);
-    margin: 0 60px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .home-grid__cell {
@@ -110,7 +118,7 @@ a {
     min-width: 240px;
     position: relative;
     text-decoration: none;
-    color: rgba(0,0,0,0.9);
+    color: rgba(0, 0, 0, 0.9);
     float: left;
     display: block;
     width: calc(25% - 20px);
@@ -203,14 +211,14 @@ a {
 
 .single-post {
     margin: 50px 25%;
-    color: rgba(0,0,0,0.9);
+    color: rgba(0, 0, 0, 0.9);
     max-width: 720px;
 }
 
 .single-post__title {
     font-size: 48px;
     text-transform: uppercase;
-    color: rgba(0,0,0,0.9);
+    color: rgba(0, 0, 0, 0.9);
     font-family: 'Dosis', sans-serif;
 }
 
@@ -228,7 +236,7 @@ a {
     float: left;
     width: 100%;
     font-weight: bold;
-    color: rgba(0,0,0,0.9);
+    color: rgba(0, 0, 0, 0.9);
     font-size: 24px;
     font-family: 'Dosis', sans-serif;
     margin-bottom: 50px;
@@ -260,7 +268,7 @@ a {
 .single-attachment__title {
     font-size: 48px;
     text-transform: uppercase;
-    color: rgba(0,0,0,0.9);
+    color: rgba(0, 0, 0, 0.9);
     font-family: 'Dosis', sans-serif;
 }
 
@@ -277,8 +285,43 @@ a {
 .single-attachment__content img {
     max-width: 720px;
     height: auto;
-    box-shadow: 0px 0px 50px 0px rgba(153,153,153,1);
+    box-shadow: 0px 0px 50px 0px rgba(153, 153, 153, 1);
 }
 
+.issue-cover {
+    width: 100%;
+    text-align: center;
+    transition: .8s;
+    transform: translateY(calc(-100% - 100px));
+}
+
+.issue-cover--show {
+    transform: translateY(0);
+}
+
+.issue-cover img {
+    box-shadow: 0px 0px 40px 0px rgba(153, 153, 153, 1);
+}
+
+.archive-grid {
+    margin: 0 auto;
+    max-width: 976px;
+    padding: 50px 0;
+}
+
+.archive-grid__item {
+    box-shadow: 0px 0px 30px 0px rgba(153, 153, 153, 1);
+    margin: 16px;
+    transition: .4s;
+}
+
+.archive-grid__item a{
+    display: block;
+    line-height: 0;
+}
+
+.archive-grid__item:hover {
+    transform: translateY(-16px);
+}
 
 
