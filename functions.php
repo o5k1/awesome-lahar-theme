@@ -9,7 +9,13 @@
  * Add scripts to index's head/footer.
  */
 function lahar_enqueue_scripts() {
+	wp_enqueue_style('garamond-font', 'https://fonts.googleapis.com/css?family=EB+Garamond');
+	wp_enqueue_style('lato-font', 'https://fonts.googleapis.com/css?family=Lato:300,400');
+	wp_enqueue_style('dosis-font', 'https://fonts.googleapis.com/css?family=Dosis');
+	wp_enqueue_style( 'reset-style', get_template_directory_uri() . '/css/reset.css' );
+	wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.0.10/css/all.css');
 	wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/css/awesome-lahar.css' );
+	wp_enqueue_script('masonry', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', ['jquery'], null, true);
 	wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/js/awesome-lahar.js', array( 'jquery' ), null, true );
 }
 
@@ -29,8 +35,14 @@ function lahar_theme_setup() {
 		'primary-nav' => __( 'Primary navigation' ),
 		'social-menu'  => __( 'Social links menu' )
 	) );
+
+	/**
+	 * Permette di associare un tag ai post di tipo "attachment".
+	 */
+	register_taxonomy_for_object_type( 'post_tag', 'attachment' );
 }
 
 add_action( 'init', 'lahar_theme_setup' );
+
 
 
