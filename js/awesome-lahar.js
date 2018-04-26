@@ -25,4 +25,7 @@ jQuery(document).ready(function () {
   var currentCategoryEl = jQuery('.home__current-category');
   currentCategoryEl.addClass('home__current-category--show');
 
+  var tagTitleEl = jQuery('.tag-title');
+  tagTitleEl.addClass('tag-title--show');
+
 });

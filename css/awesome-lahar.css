@@ -324,4 +324,27 @@ a {
     transform: translateY(-16px);
 }
 
+.tag-title {
+    font-size: 48px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Dosis', sans-serif;
+    transition: .8s linear;
+    opacity: 0;
+    line-height: 56px;
+    margin-bottom: 48px;
+}
+
+.tag-title--show {
+    opacity: 1;
+}
+
+.tag-title__name, .tag-title__magazine {
+    text-transform: uppercase;
+}
+
+.tag-title__separator {
+    height: 66px;
+}
+
 
