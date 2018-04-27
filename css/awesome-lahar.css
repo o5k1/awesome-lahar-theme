@@ -2,17 +2,44 @@ body {
     color: #636363;
     line-height: 1.4;
     background: white;
-    font-family: 'franklin-gothic-urw', 'BlinkMacSystemFont', -apple-system, 'Roboto', 'Lucida Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+}
+
+.searchform {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
 }
 
 .header, .header__logo, .header__menu, .header__search {
     float: left;
 }
 
-.header {
-    width: 100%;
+.header__logo, .header__menu, .header__search {
     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .15);
+    left: 0;
+    background: #fff;
+    width: calc(100% - 120px);
+    height: 50px;
+    z-index: 2;
+    padding: 15px 60px;
 }
 
 .header__logo img {
@@ -21,18 +48,27 @@ body {
 }
 
 .header__menu {
-    width: calc(100% - 375px);
+    width: calc(100% - 120px);
 }
 
 .header__menu ul {
     list-style: none;
-    float: left;
+    float: right;
     font-size: 13px;
     text-transform: uppercase;
 }
 
-.header__menu li a:hover {
-    color: indianred !important;
+.header__menu li a:after {
+    content: '';
+    width: 0;
+    background: black;
+    height: 2px;
+    display: block;
+    transition: .3s;
+}
+
+.header__menu li a:hover:after {
+    width: 100%;
 }
 
 .header__menu li {
@@ -42,16 +78,39 @@ body {
 
 .header__menu li a {
     text-decoration: none !important;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.9);
 }
 
 .header__search {
-    position: absolute;
-    right: 0;
+    cursor: pointer;
+}
+
+.home__current-category {
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 40px 0;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Dosis', sans-serif;
+    transition: .8s linear;
+    opacity: 0;
+}
+
+.home__current-category--show {
+    opacity: 1;
+}
+
+.body {
+    position: relative;
+    margin-top: 80px;
+    padding: 48px 0;
 }
 
 .home-grid {
-    width: 90%;
-    margin: auto;
+    width: calc(100% - 120px);
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .home-grid__cell {
@@ -59,11 +118,10 @@ body {
     min-width: 240px;
     position: relative;
     text-decoration: none;
-    color: rgb(21, 21, 21);
+    color: rgba(0, 0, 0, 0.9);
     float: left;
     display: block;
     width: calc(25% - 20px);
-    padding-bottom: calc(25% - 20px);
     margin: 10px;
 }
 
@@ -85,21 +143,28 @@ body {
 }
 
 .home-post__title {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 24px;
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
 }
 
 .home-post__content {
     position: relative;
-    margin-top: 40%;
-    padding: 0 16px;
+    padding: 16px 24px;
     background: white;
-    height: 60%;
-    overflow-y: hidden;
+}
+
+.home-post__content img {
+    width: 100%;
+    height: auto;
 }
 
 .home-post__excerpt {
     text-align: justify;
+    font-weight: 400;
+    margin-top: 10px;
 }
 
 .home-grid__cell-shadow {
@@ -113,14 +178,173 @@ body {
 
 .home-grid__cell-post {
     width: 100%;
-    height: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
-    background: violet;
     transition: .1s ease-in;
     border: 2px solid black;
 }
+
 .footer {
     float: left;
+    background: #fff;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }
+
+.footer li {
+    display: inline-block;
+    margin: 0 8px;
+}
+
+.menu-social-menu-container i {
+    color: black;
+}
+
+.menu-social-menu-container i:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.single-post {
+    margin: 50px 25%;
+    color: rgba(0, 0, 0, 0.9);
+    max-width: 720px;
+}
+
+.single-post__title {
+    font-size: 48px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Dosis', sans-serif;
+}
+
+.single-post__content {
+    font-size: 20px;
+    line-height: 30px;
+    font-family: 'EB Garamond', serif;
+}
+
+.single-post__content p {
+    margin-bottom: 32px;
+}
+
+.single-post__author-wrapper {
+    float: left;
+    width: 100%;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 24px;
+    font-family: 'Dosis', sans-serif;
+    margin-bottom: 50px;
+}
+
+.single-post__author-wrapper span {
+    float: left;
+    margin-right: 4px;
+}
+
+.single-post__author {
+    text-decoration: none !important;
+    float: left;
+}
+
+.single-post__author:after {
+    content: '';
+    width: 0;
+    background: black;
+    height: 2px;
+    display: block;
+    transition: .3s;
+}
+
+.single-post__author:hover:after {
+    width: 100%;
+}
+
+.single-attachment__title {
+    font-size: 48px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Dosis', sans-serif;
+}
+
+.single-attachment__title-wrapper {
+    margin: 0 auto;
+    max-width: 720px;
+    margin-bottom: 50px;
+}
+
+.single-attachment__content {
+    text-align: center;
+}
+
+.single-attachment__content img {
+    max-width: 720px;
+    height: auto;
+    box-shadow: 0px 0px 50px 0px rgba(153, 153, 153, 1);
+}
+
+.issue-cover {
+    width: 100%;
+    text-align: center;
+    transition: .8s;
+    transform: translateY(calc(-100% - 100px));
+}
+
+.issue-cover--show {
+    transform: translateY(0);
+}
+
+.issue-cover img {
+    box-shadow: 0px 0px 40px 0px rgba(153, 153, 153, 1);
+}
+
+.archive-grid {
+    margin: 0 auto;
+    max-width: 976px;
+    padding: 50px 0;
+}
+
+.archive-grid__item {
+    box-shadow: 0px 0px 30px 0px rgba(153, 153, 153, 1);
+    margin: 16px;
+    transition: .4s;
+}
+
+.archive-grid__item a{
+    display: block;
+    line-height: 0;
+}
+
+.archive-grid__item:hover {
+    transform: translateY(-16px);
+}
+
+.tag-title {
+    font-size: 48px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Dosis', sans-serif;
+    transition: .8s linear;
+    opacity: 0;
+    line-height: 56px;
+    margin-bottom: 48px;
+}
+
+.tag-title--show {
+    opacity: 1;
+}
+
+.tag-title__name, .tag-title__magazine {
+    text-transform: uppercase;
+}
+
+.tag-title__separator {
+    height: 66px;
+}
+
 
