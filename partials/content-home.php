@@ -1,7 +1,7 @@
 <div class="issue-cover">
-	<?php $terms = apply_filters( 'taxonomy-images-get-terms', '' , array(
-	        'term_args' => ['term_taxonomy_id' => 505]
-    ));
+	<?php $terms = apply_filters( 'taxonomy-images-get-terms', '', array(
+		'term_args' => [ 'term_taxonomy_id' => 505 ]
+	) );
 	print wp_get_attachment_image( $terms[0]->image_id, 'medium' );
 	?>
 </div>
@@ -20,9 +20,8 @@
 	foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 		<?php if ( $post->post_type === 'attachment' ) { ?>
             <a href="<?php the_permalink() ?>" class="home-grid__cell">
-                <div class="home-grid__cell-shadow"></div>
                 <div class="home-grid__cell-post">
-                    <div class="home-post__content">
+                    <div class="home-post__content--attachment">
                         <img src="<?php echo wp_get_attachment_image_src( $post->id, 'full' )[0] ?>"/>
                     </div>
                 </div>
@@ -40,4 +39,17 @@
 		<?php } ?>
 	<?php endforeach;
 	wp_reset_postdata(); ?>
+</div>
+<div class="home-other">
+    <h1>rubriche</h1>
+	<?php
+    // Recupera tutte le categorie che rappresentano rubriche
+	$categories = get_categories(
+		array( 'parent' => get_cat_ID( 'Rubriche' ) )
+	);
+
+	foreach ( $categories as $category ):?>
+    <a href="<?php print get_category_link($category)?>"><?php print $category->name ?></a>
+    <p><?php category_description($category->id) ?></p>
+	<?php endforeach; ?>
 </div>
