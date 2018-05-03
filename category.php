@@ -1,15 +1,12 @@
 <?php get_header(); ?>
     <div class="body">
-		<?php get_search_form(); ?>
-        <div class="issue-cover">
-	        <?php print apply_filters( 'taxonomy-images-queried-term-image', '', array(
-		        'image_size' => 'full'
-	        ) ); ?>
-        </div>
-        <div class="home__current-category">
-            <h1 class="home__current-category-name">#<?php global $cat;
-				echo get_cat_name( $cat ) ?></h1>
-        </div>
+		<?php get_search_form();
+		global $cat;
+		if ( lahar_has_parent_category( 'rubriche', $cat ) ):
+			get_template_part( 'partials/content-rubrica' );
+		else:
+			get_template_part( 'partials/content-category' );
+		endif; ?>
         <div class="home-grid">
 			<?php
 			global $post;
@@ -22,7 +19,6 @@
 			foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 				<?php if ( $post->post_type === 'attachment' ) { ?>
                     <a href="<?php the_permalink() ?>" class="home-grid__cell">
-                        <div class="home-grid__cell-shadow"></div>
                         <div class="home-grid__cell-post">
                             <div class="home-post__content">
                                 <img src="<?php echo wp_get_attachment_image_src( $post->id, 'full' )[0] ?>"/>
@@ -31,7 +27,6 @@
                     </a>
 				<?php } else { ?>
                     <a href="<?php the_permalink() ?>" class="home-grid__cell">
-                        <div class="home-grid__cell-shadow"></div>
                         <div class="home-grid__cell-post">
                             <div class="home-post__content">
                                 <div class="home-post__title"><?php the_title(); ?></div>
@@ -44,4 +39,4 @@
 			wp_reset_postdata(); ?>
         </div>
     </div>
-<?php get_footer(); ?>
+<?php get_footer();?>

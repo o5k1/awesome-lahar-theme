@@ -77,5 +77,11 @@ function lahar_get_attachments_by_tag( $slug ) {
 	);
 }
 
+function lahar_has_parent_category( $parentName, $catId ) {
+	$regex   = '/' . $parentName . '/i';
+	$parents = get_category_parents( $catId );
+	return preg_match( $regex, $parents ) === 1;
+}
+
 
 

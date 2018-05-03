@@ -182,6 +182,83 @@ a {
     transition: .1s ease-in;
 }
 
+.home-other {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.home-other__title {
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 40px 0;
+    color: rgba(0, 0, 0, 0.9);
+    font-family: 'Dosis', sans-serif;
+}
+
+.home-other__title:after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.9);
+    width: 80px;
+    margin: auto;
+}
+
+.home-other-grid {
+    position: relative;
+}
+
+.home-other-grid__item {
+    width: calc(33.33% - 16px);
+    height: 200px;
+    float: left;
+    margin: 8px;
+    box-shadow: 0 0 20px 0 rgba(153, 153, 153, 1);
+    background: rgba(0, 0, 0, 0.4);
+    overflow-y: hidden;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: .1s ease-in;
+}
+
+.home-other-grid__item:hover {
+    transform: translate(8px, 8px);
+}
+
+.home-other-grid__item img {
+    width: 100%;
+    position: absolute;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+
+.home-other-grid__item-film {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    top: 0;
+    height: 200px;
+}
+
+.home-other__item-title {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 32px;
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 130px;
+    text-decoration: none;
+}
+
+.home-other-grid__item--first {
+    width: calc(100% - 16px);
+}
+
 .footer {
     float: left;
     background: #fff;
@@ -345,4 +422,59 @@ a {
     height: 66px;
 }
 
+.rubrica-cover {
+    max-height: 300px;
+    overflow-y: hidden;
+    margin-top: -80px;
+    position: relative;
+}
 
+.rubrica-cover:before {
+    content: '';
+    display: block;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.rubrica-cover img {
+    width: 100%;
+    height: auto;
+}
+
+.rubrica__description {
+    position: absolute;
+    color: white;
+    bottom: 100%;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    padding: 32px 63px;
+    transition: 1s;
+    transition-delay: .5s;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.rubrica__description--visible {
+    bottom: 0;
+}
+
+.category__parent-name {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.category__parent-name:after {
+    content: '';
+    width: 0;
+    background: black;
+    height: 2px;
+    display: block;
+    margin: auto;
+    transition: .3s;
+}
+
+.category__parent-name:hover:after {
+    width: 10%;
+}

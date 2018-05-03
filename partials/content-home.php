@@ -41,15 +41,28 @@
 	wp_reset_postdata(); ?>
 </div>
 <div class="home-other">
-    <h1>rubriche</h1>
-	<?php
-    // Recupera tutte le categorie che rappresentano rubriche
-	$categories = get_categories(
-		array( 'parent' => get_cat_ID( 'Rubriche' ) )
-	);
+    <h1 class="home-other__title">rubriche</h1>
+    <div class="home-other-grid">
+		<?php
+		// Recupera tutte le categorie che rappresentano rubriche
+		$categories = get_categories(
+			array( 'parent' => get_cat_ID( 'Rubriche' ) )
+		);
 
-	foreach ( $categories as $category ):?>
-    <a href="<?php print get_category_link($category)?>"><?php print $category->name ?></a>
-    <p><?php category_description($category->id) ?></p>
-	<?php endforeach; ?>
+		foreach ( $categories as $index => $category ): if ( $index === 0 ): ?>
+        <a href="<?php print get_category_link( $category ) ?>" class="home-other-grid__item  home-other-grid__item--first">
+			<?php else: ?>
+            <a href="<?php print get_category_link( $category ) ?>" class="home-other-grid__item">
+				<?php endif; ?>
+                <div class="home-other__item-title"><?php print $category->name ?></div>
+				<?php $terms = apply_filters( 'taxonomy-images-get-terms', '', array(
+					'term_args' => [ 'term_taxonomy_id' => $category->term_id ]
+				) );
+				print wp_get_attachment_image( $terms[0]->image_id, 'full' );
+				?>
+                <div class="home-other-grid__item-film"></div>
+            </a>
+			<?php endforeach; ?>
+        </a>
+    </div>
 </div>

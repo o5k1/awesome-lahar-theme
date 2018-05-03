@@ -28,4 +28,7 @@ jQuery(document).ready(function () {
   var tagTitleEl = jQuery('.tag-title');
   tagTitleEl.addClass('tag-title--show');
 
+  var heroEl = jQuery('.rubrica__description');
+  heroEl.addClass('rubrica__description--visible');
+
 });
