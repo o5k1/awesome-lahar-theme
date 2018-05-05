@@ -31,4 +31,14 @@ jQuery(document).ready(function () {
   var heroEl = jQuery('.rubrica__description');
   heroEl.addClass('rubrica__description--visible');
 
+  var ideaButtonEl = jQuery('.idea-item__button');
+
+  ideaButtonEl.click(function (e) {
+    var targetEl = e.currentTarget;
+    console.log(e);
+    jQuery(targetEl)
+      .next('.idea-item__accordion')
+      .toggleClass('idea-item__accordion--visible');
+  });
+
 });

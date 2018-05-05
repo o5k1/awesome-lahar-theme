@@ -478,3 +478,63 @@ a {
 .category__parent-name:hover:after {
     width: 10%;
 }
+
+.idea-group {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.idea-item {
+    background: white;
+    margin-bottom: 10px;
+    box-shadow: 0 0 20px 0 rgba(153, 153, 153, 1);
+}
+
+.idea-item__button {
+    padding: 24px;
+    position: relative;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.idea-item__title {
+    position: relative;
+    float: left;
+}
+
+.idea-item__expand-action {
+    text-align: right;
+}
+
+.idea-item__accordion {
+    font-size: 18px;
+    max-height: 0;
+    transition: .5s;
+    overflow-y: hidden;
+}
+
+.idea-item__accordion--visible {
+    max-height: 150px;
+}
+
+.idea-item__accordion p {
+    margin: 0 32px 32px 32px;
+}
+
+.idea-editors {
+    max-width: 1024px;
+    padding: 24px 0;
+    margin: auto;
+    background: white;
+    box-shadow: 0 0 20px 0 rgba(153, 153, 153, 1);
+}
+
+.idea-editors__item {
+    font-size: 18px;
+    margin: 16px 32px;
+}
+
+.idea-editors__key {
+    font-weight: bold;
+    margin-right: 16px;
+}
