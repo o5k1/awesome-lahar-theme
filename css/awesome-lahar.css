@@ -104,7 +104,12 @@ a {
 .body {
     position: relative;
     margin-top: 80px;
-    padding: 48px 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.body--visible {
+    opacity: 1;
 }
 
 .home-grid {
