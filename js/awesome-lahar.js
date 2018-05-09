@@ -1,5 +1,7 @@
 jQuery(document).ready(function () {
 
+  jQuery('.body').addClass('body--visible');
+
   jQuery('.home-grid').masonry({
     // options
     itemSelector: '.home-grid__cell',
