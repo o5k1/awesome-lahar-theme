@@ -15,10 +15,10 @@ jQuery(document).ready(function () {
   });
 
   var searchIconEl = jQuery('.header__search');
-  var searchFormEl = jQuery('.searchform');
+  var searchFormEl = jQuery('.search-form');
 
   searchIconEl.click(function (e) {
-    searchFormEl.toggle()
+    searchFormEl.toggleClass('search-form--visible');
   });
 
   var issueCoverEl = jQuery('.issue-cover');

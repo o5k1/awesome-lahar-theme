@@ -31,9 +31,8 @@ $postslist = get_posts( $args );
 		foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 			<?php if ( $post->post_type === 'attachment' ) { ?>
                 <a href="<?php the_permalink() ?>" class="home-grid__cell">
-                    <div class="home-grid__cell-shadow"></div>
                     <div class="home-grid__cell-post">
-                        <div class="home-post__content">
+                        <div class="home-post__content--attachment">
                             <img src="<?php echo wp_get_attachment_image_src( $post->id, 'full' )[0] ?>"/>
                         </div>
                     </div>

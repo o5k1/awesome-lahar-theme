@@ -31,6 +31,8 @@ function lahar_theme_setup() {
 
 	add_theme_support( 'post-thumbnails' );
 
+	add_theme_support( 'html5', array( 'search-form' ) );
+
 	register_nav_menus( array(
 		'primary-nav' => __( 'Primary navigation' ),
 		'social-menu' => __( 'Social links menu' )
@@ -87,6 +89,25 @@ function lahar_has_parent_category( $parentName, $catId ) {
 function lahar_get_site_title() {
 	return wp_title( '|', false, 'right' ) . get_bloginfo( 'name' );
 }
+
+/**
+ * Filter search query only for post and attachments.
+ *
+ * @param $query
+ *
+ * @return mixed
+ */
+function search_filter( $query ) {
+
+	if ( $query->is_search && ! is_admin() ) {
+		$query->set( 'post_type', array( 'post', 'attachment' ) );
+		$query->set( 'post_status', 'any' );
+	}
+
+	return $query;
+}
+
+add_filter( 'pre_get_posts', 'search_filter' );
 
 
 
