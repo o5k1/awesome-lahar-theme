@@ -153,6 +153,64 @@ input[type="search"]::-webkit-search-results-decoration {
     opacity: 1;
 }
 
+.home-hero {
+    background: white;
+    position: relative;
+    padding: 80px;
+    text-align: center;
+    padding-bottom: 122px;
+}
+
+.home-hero__content {
+    display: inline-block;
+    position: relative;
+}
+
+.home__issue-cover {
+    display: inline-block;
+}
+
+.home__issue-cover img {
+    box-shadow: 8px 8px 10px 0 rgba(153, 153, 153, 1);
+}
+
+.home__issue-title-wrapper {
+    display: inline-block;
+    text-align: right;
+    position: relative;
+    bottom: 113px;
+    margin-left: 20px;
+}
+
+.home__issue-title {
+    font-size: 56px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.home__collab-action {
+    font-size: 15px;
+    background: transparent;
+    border: none;
+    color: #333;
+    font-family: "Lato", sans-serif;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.home__collab-action:after {
+    content: '';
+    width: 0;
+    background: black;
+    height: 2px;
+    display: block;
+    transition: .3s;
+}
+
+.home__collab-action:hover:after {
+    width: 100%;
+}
+
 .body {
     position: relative;
     margin-top: 80px;
@@ -168,6 +226,7 @@ input[type="search"]::-webkit-search-results-decoration {
     width: calc(100% - 120px);
     margin: 0 auto;
     max-width: 1200px;
+    top: -54px;
 }
 
 .home-grid__cell {
@@ -240,30 +299,48 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .home-other {
-    max-width: 1200px;
     margin: auto;
+    background: white;
+    padding: 40px 0;
+    text-align: center;
 }
 
 .home-other__title {
     font-size: 32px;
     text-align: center;
     text-transform: uppercase;
-    padding: 40px 0;
-    color: rgba(0, 0, 0, 0.9);
-    font-family: 'Dosis', sans-serif;
+    padding: 0 50px;
+    background: #333;
+    color: white;
+    display: inline-block;
+    position: relative;
+    top: -62px;
+    box-shadow: 0 0 20px 0 rgba(153, 153, 153, 1);
 }
 
-.home-other__title:after {
-    content: '';
-    display: block;
-    height: 3px;
-    background: rgba(0, 0, 0, 0.9);
-    width: 80px;
-    margin: auto;
+.subsection {
+    text-align: center;
+}
+
+.subsection-title {
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 50px;
+    background: #333;
+    color: white;
+    display: inline-block;
+    position: relative;
+    margin: 40px 0;
+    box-shadow: 0 0 20px 0 rgba(153, 153, 153, 1);
 }
 
 .home-other-grid {
     position: relative;
+    width: calc(100% - 120px);
+    margin: 0 auto;
+    max-width: 1200px;
+    overflow: hidden;
 }
 
 .home-other-grid__item {
@@ -305,9 +382,7 @@ input[type="search"]::-webkit-search-results-decoration {
     z-index: 2;
     color: white;
     font-size: 32px;
-    font-family: 'Dosis', sans-serif;
     text-transform: uppercase;
-    font-weight: bold;
     margin-top: 130px;
     text-decoration: none;
 }
@@ -324,7 +399,6 @@ input[type="search"]::-webkit-search-results-decoration {
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
 }
 
 .footer .menu-social-menu-container {
@@ -548,6 +622,7 @@ input[type="search"]::-webkit-search-results-decoration {
     background: white;
     margin-bottom: 10px;
     box-shadow: 0 0 20px 0 rgba(153, 153, 153, 1);
+    text-align: left;
 }
 
 .idea-item__button {
@@ -587,6 +662,7 @@ input[type="search"]::-webkit-search-results-decoration {
     margin: auto;
     background: white;
     box-shadow: 0 0 20px 0 rgba(153, 153, 153, 1);
+    text-align: left;
 }
 
 .idea-editors__item {

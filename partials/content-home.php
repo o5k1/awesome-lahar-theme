@@ -1,12 +1,27 @@
-<div class="issue-cover">
-	<?php $terms = apply_filters( 'taxonomy-images-get-terms', '', array(
+<!--<div class="issue-cover">
+	<? /*php $terms = apply_filters( 'taxonomy-images-get-terms', '', array(
 		'term_args' => [ 'term_taxonomy_id' => 505 ]
 	) );
-	print wp_get_attachment_image( $terms[0]->image_id, 'medium' );
-	?>
-</div>
-<div class="home__current-category">
+	print wp_get_attachment_image( $terms[0]->image_id, 'medium' );*/
+?>
+</div>-->
+<!--<div class="home__current-category">
     <h1 class="home__current-category-name">#39 - Roberto Baggio</h1>
+</div>-->
+<div class="home-hero">
+    <div class="home-hero__content">
+        <div class="home__issue-cover">
+			<?php $terms = apply_filters( 'taxonomy-images-get-terms', '', array(
+				'term_args' => [ 'term_taxonomy_id' => 505 ]
+			) );
+			print wp_get_attachment_image( $terms[0]->image_id, 'medium' );
+			?>
+        </div>
+        <div class="home__issue-title-wrapper">
+            <div class="home__issue-title">#39 - Roberto Baggio</div>
+            <div class="home__collab-action">Collabora al prossimo numero</div>
+        </div>
+    </div>
 </div>
 <div class="home-grid">
 	<?php
@@ -49,8 +64,11 @@
 			array( 'parent' => get_cat_ID( 'Rubriche' ) )
 		);
 
-		foreach ( $categories as $index => $category ): if ( $index === 0 ): ?>
-        <a href="<?php print get_category_link( $category ) ?>" class="home-other-grid__item  home-other-grid__item--first">
+		foreach ( $categories
+
+		as $index => $category ): if ( $index === 0 ): ?>
+        <a href="<?php print get_category_link( $category ) ?>"
+           class="home-other-grid__item  home-other-grid__item--first">
 			<?php else: ?>
             <a href="<?php print get_category_link( $category ) ?>" class="home-other-grid__item">
 				<?php endif; ?>
