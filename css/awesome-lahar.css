@@ -419,16 +419,23 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .single-post {
-    margin: 50px 25%;
+    margin: 50px 0;
     color: rgba(0, 0, 0, 0.9);
-    max-width: 720px;
+}
+
+.single-post__wrapper {
+    background: white;
+    margin: 50px auto;
+    margin-top: 150px;
+    padding: 40px 60px;
+    max-width: 620px;
+    box-shadow: 0 0 20px 0 rgba(153, 153, 153, 0.3);
 }
 
 .single-post__title {
     font-size: 48px;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.9);
-    font-family: 'Dosis', sans-serif;
 }
 
 .single-post__content {
@@ -444,10 +451,8 @@ input[type="search"]::-webkit-search-results-decoration {
 .single-post__author-wrapper {
     float: left;
     width: 100%;
-    font-weight: bold;
     color: rgba(0, 0, 0, 0.9);
     font-size: 24px;
-    font-family: 'Dosis', sans-serif;
     margin-bottom: 50px;
 }
 
