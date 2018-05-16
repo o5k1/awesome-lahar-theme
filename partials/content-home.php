@@ -1,13 +1,3 @@
-<!--<div class="issue-cover">
-	<? /*php $terms = apply_filters( 'taxonomy-images-get-terms', '', array(
-		'term_args' => [ 'term_taxonomy_id' => 505 ]
-	) );
-	print wp_get_attachment_image( $terms[0]->image_id, 'medium' );*/
-?>
-</div>-->
-<!--<div class="home__current-category">
-    <h1 class="home__current-category-name">#39 - Roberto Baggio</h1>
-</div>-->
 <div class="home-hero">
     <div class="home-hero__content">
         <div class="home__issue-cover">
@@ -19,7 +9,10 @@
         </div>
         <div class="home__issue-title-wrapper">
             <div class="home__issue-title">#39 - Roberto Baggio</div>
-            <div class="home__collab-action">Collabora al prossimo numero</div>
+
+            <a href="<?php print get_permalink( get_page_by_path( 'collabora' ) ) ?>" class="home__collab-action">
+                Collabora al prossimo numero
+            </a>
         </div>
     </div>
 </div>
