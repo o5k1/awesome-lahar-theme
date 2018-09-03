@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <div class="body">
+    <div class="body contacts">
 		<?php get_search_form(); ?>
 		<?php gmwd_map( 1, 1 ); ?>
         <div class="subsection">

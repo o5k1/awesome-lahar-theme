@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-    <div class="body">
+    <div class="body idea">
 		<?php get_search_form(); ?>
         <div class="subsection">
             <h1 class="subsection-title">Progetto</h1>

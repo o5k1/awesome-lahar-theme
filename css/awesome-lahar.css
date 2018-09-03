@@ -119,6 +119,10 @@ input[type="search"]::-webkit-search-results-decoration {
     transition: .3s;
 }
 
+.current-menu-item a:after {
+    width: 100% !important;
+}
+
 .header__menu li a:hover:after {
     width: 100%;
 }
@@ -144,7 +148,6 @@ input[type="search"]::-webkit-search-results-decoration {
     text-transform: uppercase;
     padding: 40px 0;
     color: rgba(0, 0, 0, 0.9);
-    font-family: 'Dosis', sans-serif;
     transition: .8s linear;
     opacity: 0;
 }
@@ -218,6 +221,11 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-top: 80px;
     opacity: 0;
     transition: 1s;
+    min-height: calc(100vh - 150px);
+}
+
+.body.idea, .body.collaborate, .body.contacts {
+    margin-bottom: 50px;
 }
 
 .body--visible {
@@ -244,7 +252,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .home-grid__cell:hover .home-grid__cell-post {
-    transform: translate(8px, 8px);
+    transform: translateY(8px);
 }
 
 .home-post__thumbnail {
@@ -356,7 +364,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .home-other-grid__item:hover {
-    transform: translate(8px, 8px);
+    transform: translateY(8px);
 }
 
 .home-other-grid__item img {
@@ -481,7 +489,6 @@ input[type="search"]::-webkit-search-results-decoration {
     font-size: 48px;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.9);
-    font-family: 'Dosis', sans-serif;
 }
 
 .single-attachment__title-wrapper {
@@ -492,6 +499,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .single-attachment__content {
     text-align: center;
+    margin-bottom: 60px;
 }
 
 .single-attachment__content img {
@@ -536,11 +544,18 @@ input[type="search"]::-webkit-search-results-decoration {
     transform: translateY(-16px);
 }
 
+.archive.category .home-hero {
+    padding: 40px 80px 56px 80px;
+}
+
+.archive.category .home__current-category {
+    padding: 20px 0;
+}
+
 .tag-title {
     font-size: 48px;
     text-align: center;
     color: rgba(0, 0, 0, 0.9);
-    font-family: 'Dosis', sans-serif;
     transition: .8s linear;
     opacity: 0;
     line-height: 56px;
@@ -584,7 +599,6 @@ input[type="search"]::-webkit-search-results-decoration {
     position: absolute;
     color: white;
     bottom: 100%;
-    font-family: 'Dosis', sans-serif;
     text-align: center;
     font-size: 18px;
     padding: 32px 63px;
