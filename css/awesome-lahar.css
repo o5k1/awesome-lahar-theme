@@ -276,6 +276,12 @@ input[type="search"]::-webkit-search-results-decoration {
     margin: auto;
 }
 
+@media only screen and (max-width: 400px) {
+    .collaborate-content {
+        width: 90%;
+    }
+}
+
 .collaborate-content :not(p:first-child) {
     line-height: 26px;
 }
@@ -524,6 +530,15 @@ input[type="search"]::-webkit-search-results-decoration {
     padding: 40px 60px;
     max-width: 620px;
     box-shadow: 0 0 20px 0 rgba(153, 153, 153, 0.3);
+}
+
+@media only screen and (max-width: 400px) {
+    .single-post__wrapper {
+        margin-top: 0;
+        padding: 40px 20px;
+        margin-bottom: 1px;
+        box-shadow: none;
+    }
 }
 
 .single-post__title {
