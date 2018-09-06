@@ -11,6 +11,14 @@ a {
     color: black;
 }
 
+b, strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
 .search-form {
     position: fixed;
     background: rgba(0, 0, 0, 0.8);
@@ -224,8 +232,47 @@ input[type="search"]::-webkit-search-results-decoration {
     min-height: calc(100vh - 150px);
 }
 
-.body.idea, .body.collaborate, .body.contacts {
+.body.idea, .body.contacts {
     margin-bottom: 50px;
+}
+
+.body.collaborate {
+    opacity: 1;
+    width: 100%;
+    min-height: calc(100vh - 120px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-color: white;
+    margin-top: 48px;
+    padding-top: 50px;
+}
+
+.intro, .mood, .illustrations, .articles {
+    background: white;
+    margin-bottom: 32px;
+    padding: 24px;
+    box-shadow: 0 0 20px 0 rgba(153, 153, 153, 1);
+}
+
+.collaborate-content {
+    max-width: 660px;
+    margin: auto;
+}
+
+.collaborate-content :not(p:first-child) {
+    line-height: 26px;
+}
+
+.collaborate h3 {
+    text-align: center;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.collaborate p {
+    margin-top: 26px;
 }
 
 .body--visible {
