@@ -19,6 +19,11 @@ em {
     font-style: italic;
 }
 
+p img {
+    width: 100%;
+    height: auto;
+}
+
 .search-form {
     position: fixed;
     background: rgba(0, 0, 0, 0.8);

@@ -1,14 +1,17 @@
 <div class="home-hero">
     <div class="home-hero__content">
         <div class="home__issue-cover">
-			<?php $terms = apply_filters( 'taxonomy-images-get-terms', '', array(
-				'term_args' => [ 'term_taxonomy_id' => 505 ]
+			<?php
+			$current_category_id = get_theme_mod('current_mood_id');
+			$terms               = apply_filters( 'taxonomy-images-get-terms', '', array(
+				'term_args' => [ 'term_taxonomy_id' => $current_category_id ]
 			) );
 			print wp_get_attachment_image( $terms[0]->image_id, 'medium' );
+			$current_category_name = get_term( $current_category_id )->name;
 			?>
         </div>
         <div class="home__issue-title-wrapper">
-            <div class="home__issue-title">#39 - Roberto Baggio</div>
+            <div class="home__issue-title">#<?php print $current_category_name ?></div>
 
             <a href="<?php print get_permalink( get_page_by_path( 'collabora' ) ) ?>" class="home__collab-action">
                 Collabora al prossimo numero
@@ -19,10 +22,13 @@
 <div class="home-grid">
 	<?php
 	global $post;
-	$args = array( 'category' => 505, 'posts_per_page' => - 1 );
+	$args = array( 'category' => $current_category_id, 'posts_per_page' => - 1 );
 
 	$articles = get_posts( $args );
-	$images   = get_posts( array( 'category' => 505, 'posts_per_page' => - 1, 'post_type' => 'attachment' ) );
+	$images   = get_posts( array( 'category'       => $current_category_id,
+	                              'posts_per_page' => - 1,
+	                              'post_type'      => 'attachment'
+	) );
 	$myposts  = array_merge( $articles, $images );
 	shuffle( $myposts );
 	foreach ( $myposts as $post ) : setup_postdata( $post ); ?>

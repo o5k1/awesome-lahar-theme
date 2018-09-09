@@ -109,5 +109,42 @@ function search_filter( $query ) {
 
 add_filter( 'pre_get_posts', 'search_filter' );
 
+/**
+ * Adds "choose current mood" functionality to home page customizer.
+ * @param $wp_customize
+ */
+function lahar_customize_register( $wp_customize ) {
+	$moods = apply_filters( 'taxonomy-images-get-terms', '' );
+	$moods = array_filter($moods, function($mood){
+		return ! lahar_has_parent_category( 'Rubriche', $mood->term_id );
+	});
+	rsort( $moods ); // Show last added moods first
+	$moodsById = [];
+	for ( $i = 0; $i < count( $moods ); $i ++ ) {
+		$moodsById[ $moods[ $i ]->term_id ] = $moods[ $i ]->slug;
+	}
+	// Do stuff with $wp_customize, the WP_Customize_Manager object.
+	$wp_customize->add_setting( 'current_mood_id', array(
+		'type'                 => 'theme_mod', // or 'option'
+		'capability'           => 'edit_theme_options',
+		'theme_supports'       => '', // Rarely needed.
+		'default'              => 1,
+		'transport'            => 'refresh', // or postMessage
+		'sanitize_callback'    => '',
+		'sanitize_js_callback' => '', // Basically to_json.
+	) );
+
+	$wp_customize->add_control( 'current_mood_id', array(
+		'type'            => 'select',
+		'choices'         => $moodsById,
+		'priority'        => 10, // Within the section.
+		'section'         => 'static_front_page', // Required, core or custom.
+		'label'           => __( 'Il mood da mostrare è' ),
+		'active_callback' => 'is_front_page',
+	) );
+}
+
+add_action( 'customize_register', 'lahar_customize_register' );
+
 
 
