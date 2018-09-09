@@ -37,6 +37,9 @@
 				<?php } ?>
 			<?php endforeach;
 			wp_reset_postdata(); ?>
+            <div class="menu--mobile">
+		        <?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
+            </div>
         </div>
     </div>
 <?php get_footer();?>

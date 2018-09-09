@@ -1,6 +1,9 @@
 <?php get_header(); ?>
     <div class="body idea">
 		<?php get_search_form(); ?>
+        <div class="menu--mobile">
+		    <?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
+        </div>
         <div class="subsection">
             <h1 class="subsection-title">Progetto</h1>
             <ul class="idea-group">

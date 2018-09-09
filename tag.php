@@ -16,10 +16,11 @@ $postslist = get_posts( $args );
 <?php get_header(); ?>
 <div class="body">
 	<?php get_search_form(); ?>
+    <div class="menu--mobile">
+		<?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
+    </div>
     <div class="tag-title">
         <div class="tag-title__name"><?php single_tag_title() ?></div>
-        <div class="tag-title__separator">x</div>
-        <div class="tag-title__magazine">lahar magazine</div>
     </div>
     <div class="home-grid">
 		<?php

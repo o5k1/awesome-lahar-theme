@@ -1,6 +1,9 @@
 <?php get_header(); ?>
     <div class="body contacts">
 		<?php get_search_form(); ?>
+        <div class="menu--mobile">
+		    <?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
+        </div>
 		<?php gmwd_map( 1, 1 ); ?>
         <div class="subsection">
             <h1 class="subsection-title">Contatti</h1>

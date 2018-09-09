@@ -1,6 +1,9 @@
 <?php get_header(); ?>
 <div class="body">
 	<?php get_search_form(); ?>
+    <div class="menu--mobile">
+		<?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
+    </div>
 	<div class="home-other">
 		<div class="home-other-grid">
 			<?php

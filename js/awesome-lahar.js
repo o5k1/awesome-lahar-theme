@@ -43,4 +43,13 @@ jQuery(document).ready(function () {
       .toggleClass('idea-item__accordion--visible');
   });
 
+  var hamburgerEl = jQuery('.hamburger');
+  var mobileMenuEl = jQuery('.menu--mobile');
+
+  hamburgerEl.click(function (e) {
+    var targetEl = e.currentTarget;
+    jQuery(targetEl).toggleClass('is-active');
+    mobileMenuEl.toggleClass('is-active');
+  });
+
 });
