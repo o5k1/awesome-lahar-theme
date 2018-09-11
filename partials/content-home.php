@@ -2,7 +2,7 @@
     <div class="home-hero__content">
         <div class="home__issue-cover">
 			<?php
-			$current_category_id = get_theme_mod('current_mood_id');
+			$current_category_id = get_theme_mod( 'current_mood_id' );
 			$terms               = apply_filters( 'taxonomy-images-get-terms', '', array(
 				'term_args' => [ 'term_taxonomy_id' => $current_category_id ]
 			) );
@@ -25,9 +25,10 @@
 	$args = array( 'category' => $current_category_id, 'posts_per_page' => - 1 );
 
 	$articles = get_posts( $args );
-	$images   = get_posts( array( 'category'       => $current_category_id,
-	                              'posts_per_page' => - 1,
-	                              'post_type'      => 'attachment'
+	$images   = get_posts( array(
+		'category'       => $current_category_id,
+		'posts_per_page' => - 1,
+		'post_type'      => 'attachment'
 	) );
 	$myposts  = array_merge( $articles, $images );
 	shuffle( $myposts );
@@ -63,23 +64,19 @@
 			array( 'parent' => get_cat_ID( 'Rubriche' ) )
 		);
 
-		foreach ( $categories
-
-		as $index => $category ): if ( $index === 0 ): ?>
-        <a href="<?php print get_category_link( $category ) ?>"
-           class="home-other-grid__item  home-other-grid__item--first">
-			<?php else: ?>
+		foreach ( $categories as $index => $category ):?>
             <a href="<?php print get_category_link( $category ) ?>" class="home-other-grid__item">
-				<?php endif; ?>
-                <div class="home-other__item-title"><?php print $category->name ?></div>
-				<?php $terms = apply_filters( 'taxonomy-images-get-terms', '', array(
-					'term_args' => [ 'term_taxonomy_id' => $category->term_id ]
-				) );
-				print wp_get_attachment_image( $terms[0]->image_id, 'full' );
-				?>
-                <div class="home-other-grid__item-film"></div>
+                <div class="home-other-grid__item-hero">
+					<?php $terms = apply_filters( 'taxonomy-images-get-terms', '', array(
+						'term_args' => [ 'term_taxonomy_id' => $category->term_id ]
+					) );
+					print wp_get_attachment_image( $terms[0]->image_id, 'full' );
+					?>
+                    <div class="home-other-grid__item-film"></div>
+                    <div class="home-other__item-title"><?php print $category->name ?></div>
+                </div>
+                <div class="home-other__item-description"><?php print category_description( $category ) ?></div>
             </a>
-			<?php endforeach; ?>
-        </a>
+		<?php endforeach; ?>
     </div>
 </div>

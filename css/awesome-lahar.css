@@ -524,8 +524,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .home-other-grid__item {
-    width: calc(33.33% - 16px);
-    height: 200px;
+    width: calc(100% - 16px);
     float: left;
     margin: 8px;
     box-shadow: 0 0 20px 0 rgba(153, 153, 153, 1);
@@ -549,10 +548,25 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .home-other-grid__item img {
     width: 100%;
-    position: absolute;
     height: auto;
     top: 0;
     left: 0;
+}
+
+.home-other__item-description {
+    position: relative;
+    z-index: 30;
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    background: white;
+    padding: 16px 24px;
+    font-style: italic;
+    line-height: 22px;
+}
+
+.home-other-grid__item-hero {
+    height: 180px;
 }
 
 .home-other-grid__item-film {
@@ -560,17 +574,19 @@ input[type="search"]::-webkit-search-results-decoration {
     background: rgba(0, 0, 0, 0.4);
     width: 100%;
     top: 0;
-    height: 200px;
+    height: 100%;
 }
 
 .home-other__item-title {
-    position: relative;
+    position: absolute;
     z-index: 2;
+    left: 20px;
+    top: 10px;
     color: white;
     font-size: 32px;
     text-transform: uppercase;
-    margin-top: 130px;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .home-other-grid__item--first {
