@@ -21,9 +21,12 @@
 							print wp_get_attachment_image( $terms[0]->image_id, 'full' );
 							?>
                             <div class="home-other-grid__item-film"></div>
-                            <div class="home-other__item-title"><?php print $category->name ?></div>
+                            <div>
+                                <div class="home-other__item-title">
+									<?php print $category->name ?>
+                                </div>
+                            </div>
                         </div>
-                        <div class="home-other__item-description"><?php print category_description( $category ) ?></div>
                     </a>
 				<?php endforeach; ?>
             </div>

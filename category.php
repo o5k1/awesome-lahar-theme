@@ -1,8 +1,12 @@
-<?php get_header(); ?>
-    <div class="body">
-		<?php get_search_form();
-		global $cat;
-		if ( lahar_has_parent_category( 'rubriche', $cat ) ):
+<?php
+global $cat;
+get_header(); ?>
+    <div class="body <?php lahar_has_parent_category( 'rubriche', $cat ) ? print 'rubrica' : null ?>">
+		<?php get_search_form(); ?>
+        <div class="menu--mobile">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
+        </div>
+		<?php if ( lahar_has_parent_category( 'rubriche', $cat ) ):
 			get_template_part( 'partials/content-rubrica' );
 		else:
 			get_template_part( 'partials/content-category' );
@@ -37,9 +41,6 @@
 				<?php } ?>
 			<?php endforeach;
 			wp_reset_postdata(); ?>
-            <div class="menu--mobile">
-		        <?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
-            </div>
         </div>
     </div>
-<?php get_footer();?>
+<?php get_footer(); ?>

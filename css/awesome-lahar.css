@@ -211,6 +211,16 @@ input[type="search"]::-webkit-search-results-decoration {
     }
 }
 
+.hamburger {
+    display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    .hamburger {
+        display: inline-block;
+    }
+}
+
 .hamburger-box {
     width: 24px;
     height: 24px;
@@ -477,6 +487,8 @@ input[type="search"]::-webkit-search-results-decoration {
     background: white;
     padding: 40px 0;
     text-align: center;
+    float: left;
+    width: 100%;
 }
 
 .home-other__title {
@@ -513,20 +525,19 @@ input[type="search"]::-webkit-search-results-decoration {
     position: relative;
     width: calc(100% - 120px);
     margin: 0 auto;
-    max-width: 1200px;
-    overflow: hidden;
+    max-width: 980px;
 }
 
 @media only screen and (max-width: 400px) {
     .home-other-grid {
-        width: auto;
+        width: calc(100% - 50px);
     }
 }
 
 .home-other-grid__item {
     width: calc(100% - 16px);
     float: left;
-    margin: 8px;
+    margin: 8px 0;
     box-shadow: 0 0 20px 0 rgba(153, 153, 153, 1);
     background: rgba(0, 0, 0, 0.4);
     overflow-y: hidden;
@@ -555,7 +566,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .home-other__item-description {
     position: relative;
-    z-index: 30;
     text-align: left;
     font-weight: 400;
     font-size: 14px;
@@ -577,11 +587,15 @@ input[type="search"]::-webkit-search-results-decoration {
     height: 100%;
 }
 
+.rubrica .home-grid {
+    top: 0;
+}
+
 .home-other__item-title {
     position: absolute;
-    z-index: 2;
-    left: 20px;
     top: 10px;
+    padding: 0 20px;
+    text-align: left;
     color: white;
     font-size: 32px;
     text-transform: uppercase;
@@ -780,16 +794,15 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .rubrica-cover {
-    max-height: 300px;
-    overflow-y: hidden;
-    margin-top: -80px;
     position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .rubrica-cover:before {
     content: '';
     display: block;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100%;
     position: absolute;
@@ -801,15 +814,14 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .rubrica__description {
-    position: absolute;
+    position: relative;
     color: white;
-    bottom: 100%;
     text-align: center;
-    font-size: 18px;
-    padding: 32px 63px;
-    transition: 1s;
-    transition-delay: .5s;
-    background: rgba(0, 0, 0, 0.8);
+    padding: 32px 20px;
+    font-size: 32px;
+    font-weight: 400;
+    max-width: 920px;
+    margin: auto;
 }
 
 .rubrica__description--visible {
