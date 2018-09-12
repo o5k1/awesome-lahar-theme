@@ -1013,3 +1013,16 @@ input.wpcf7-form-control.wpcf7-submit {
     float: left;
     margin-left: 10%;
 }
+
+@media only screen and (max-width: 400px) {
+    .contatti-content #menu-social-menu, .contact-form__name {
+        width: 100%;
+    }
+    .contact-form {
+        width: 80%;
+    }
+    .contact-form__email {
+        width: 100%;
+        margin-left: 0;
+    }
+}
