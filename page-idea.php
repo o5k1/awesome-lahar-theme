@@ -69,7 +69,7 @@
                 </li>
                 <li class="idea-item">
                     <div class="idea-item__button">
-                        <div class="idea-item__title">Virtulamente</div>
+                        <div class="idea-item__title">Virtualmente</div>
                         <div class="idea-item__expand-action">+</div>
                     </div>
                     <div class="idea-item__accordion">
