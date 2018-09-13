@@ -1,4 +1,4 @@
-jQuery(document).ready(function () {
+jQuery(window).load(function () {
 
   jQuery('.body').addClass('body--visible');
 
