@@ -1031,4 +1031,7 @@ input.wpcf7-form-control.wpcf7-submit {
         width: 100%;
         margin-left: 0;
     }
+    .attachment img {
+        max-width: 90%;
+    }
 }
