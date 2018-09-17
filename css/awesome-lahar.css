@@ -146,6 +146,7 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 100%;
     text-transform: uppercase;
     font-weight: bold;
+    padding: 10px 0;
 }
 
 .menu--mobile li {
