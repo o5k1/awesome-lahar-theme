@@ -31,6 +31,7 @@ gulp.task('default', ['clean'], function () {
     'scripts',
     'images',
     'php',
+    'screenshot',
     'deploy'
   );
 });
@@ -62,11 +63,11 @@ gulp.task('images', function () {
     .pipe(gulp.dest('./dist/img'))
 });
 
-// Gulp task to move images
-gulp.task('images', function () {
-  return gulp.src('./img/**/*.*')
+// Gulp task to move screenshot image
+gulp.task('screenshot', function () {
+  return gulp.src('./screenshot.png')
   // Output
-    .pipe(gulp.dest('./dist/img'))
+    .pipe(gulp.dest('./dist'))
 });
 
 // Gulp task to move PHP files
