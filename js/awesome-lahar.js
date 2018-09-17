@@ -16,9 +16,20 @@ jQuery(window).load(function () {
 
   var searchIconEl = jQuery('.header__search');
   var searchFormEl = jQuery('.search-form');
+  var hamburgerEl = jQuery('.hamburger');
+  var mobileMenuEl = jQuery('.menu--mobile');
 
-  searchIconEl.click(function (e) {
+  searchIconEl.click(function () {
+    hamburgerEl.removeClass('is-active');
+    mobileMenuEl.removeClass('is-active');
     searchFormEl.toggleClass('search-form--visible');
+  });
+
+  hamburgerEl.click(function (e) {
+    var targetEl = e.currentTarget;
+    searchFormEl.removeClass('search-form--visible');
+    jQuery(targetEl).toggleClass('is-active');
+    mobileMenuEl.toggleClass('is-active');
   });
 
   var issueCoverEl = jQuery('.issue-cover');
@@ -41,15 +52,6 @@ jQuery(window).load(function () {
     jQuery(targetEl)
       .next('.idea-item__accordion')
       .toggleClass('idea-item__accordion--visible');
-  });
-
-  var hamburgerEl = jQuery('.hamburger');
-  var mobileMenuEl = jQuery('.menu--mobile');
-
-  hamburgerEl.click(function (e) {
-    var targetEl = e.currentTarget;
-    jQuery(targetEl).toggleClass('is-active');
-    mobileMenuEl.toggleClass('is-active');
   });
 
 });
