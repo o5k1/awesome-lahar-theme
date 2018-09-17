@@ -6,7 +6,9 @@
 			$terms               = apply_filters( 'taxonomy-images-get-terms', '', array(
 				'term_args' => [ 'term_taxonomy_id' => $current_category_id ]
 			) );
-			print wp_get_attachment_image( $terms[0]->image_id, 'medium' );
+			if ( ! empty( $terms ) ) {
+				print wp_get_attachment_image( $terms[0]->image_id, 'medium' );
+			}
 			$current_category_name = get_term( $current_category_id )->name;
 			?>
         </div>
@@ -70,7 +72,9 @@
 					<?php $terms = apply_filters( 'taxonomy-images-get-terms', '', array(
 						'term_args' => [ 'term_taxonomy_id' => $category->term_id ]
 					) );
-					print wp_get_attachment_image( $terms[0]->image_id, 'full' );
+					if ( ! empty( $terms ) ) {
+						print wp_get_attachment_image( $terms[0]->image_id, 'full' );
+					}
 					?>
                     <div class="home-other-grid__item-film"></div>
                     <div class="home-other__item-title"><?php print $category->name ?></div>

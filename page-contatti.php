@@ -4,7 +4,7 @@
         <div class="menu--mobile">
 		    <?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
         </div>
-		<?php gmwd_map( 1, 1 ); ?>
+		<?php if (function_exists('gmwd_map')) gmwd_map( 1, 1 ); ?>
         <div class="subsection">
             <h1 class="subsection-title">Contatti</h1>
             <div class="idea-editors">
