@@ -122,11 +122,17 @@ input[type="search"]::-webkit-search-results-decoration {
     padding: 15px 60px;
 }
 
+@media only screen and (max-width: 820px) {
+    .header {
+        padding: 15px 20px;
+        width: calc(100% - 40px);
+    }
+}
+
 @media only screen and (max-width: 400px) {
     .header {
         padding: 0 20px;
         padding-top: 6px;
-        width: calc(100% - 40px);
     }
 }
 
@@ -152,6 +158,19 @@ input[type="search"]::-webkit-search-results-decoration {
     font-weight: bold;
     padding: 10px 0;
 }
+
+@media only screen and (min-width: 401px) {
+    .menu--mobile {
+        padding: 40px 0;
+    }
+}
+
+@media only screen and (min-width: 821px) {
+    .menu--mobile {
+        display: none;
+    }
+}
+
 
 .menu--mobile li {
     padding: 16px 0;
@@ -268,9 +287,8 @@ input[type="search"]::-webkit-search-results-decoration {
 .home-hero {
     background: white;
     position: relative;
-    padding: 80px;
-    text-align: center;
-    padding-bottom: 122px;
+    padding: 80px 0 122px 0;
+    text-align: center;+
 }
 
 @media only screen and (max-width: 400px) {
@@ -370,12 +388,13 @@ input[type="search"]::-webkit-search-results-decoration {
     background-size: cover;
     background-color: white;
     margin-top: 48px;
-    padding-top: 50px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .intro, .mood, .illustrations, .articles {
     background: white;
-    margin-bottom: 32px;
+    margin-top: 32px;
     padding: 24px;
     box-shadow: 0 0 20px 0 rgba(153, 153, 153, 1);
 }
@@ -786,7 +805,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .archive.category .home-hero {
-    padding: 40px 80px 56px 80px;
+    padding: 40px 20px 56px 20px;
 }
 
 .archive.category .home__current-category {
@@ -870,7 +889,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .idea-group {
-    max-width: 1024px;
+    max-width: 820px;
     margin: auto;
 }
 
@@ -1004,6 +1023,7 @@ input.wpcf7-form-control.wpcf7-submit {
     margin: auto;
     margin-top: 50px;
     text-align: center;
+    padding: 0 20px;
 }
 
 .contact-form label {
