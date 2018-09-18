@@ -4,9 +4,7 @@ jQuery(window).load(function () {
 
   jQuery('.home-grid').masonry({
     // options
-    itemSelector: '.home-grid__cell',
-    columnWidth: '.home-grid__cell',
-    percentPosition: true
+    itemSelector: '.home-grid__cell'
   });
 
   jQuery('.archive-grid').masonry({

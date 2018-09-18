@@ -443,7 +443,6 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .home-grid__cell {
     font-size: 13px;
-    min-width: 240px;
     position: relative;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.9);
@@ -451,6 +450,12 @@ input[type="search"]::-webkit-search-results-decoration {
     display: block;
     width: calc(25% - 20px);
     margin: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .home-grid__cell {
+        width: calc(50% - 20px);
+    }
 }
 
 @media only screen and (max-width: 400px) {
