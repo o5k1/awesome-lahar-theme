@@ -1,6 +1,7 @@
 <?php get_header(); ?>
     <div class="body">
 		<?php get_search_form();
+
 		if ( have_posts() ) {
 			while ( have_posts() ) {
 				the_post();
@@ -12,5 +13,8 @@
 			}
 		}
 		?>
+        <div class="menu--mobile">
+		    <?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
+        </div>
     </div>
 <?php get_footer(); ?>

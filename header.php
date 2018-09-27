@@ -2,7 +2,11 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<?php wp_head() ?>
+    <!-- Browser status bar's color-->
+    <meta name="theme-color" content="black">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title><?php print lahar_get_site_title() ?></title>
+	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <div class="header">
@@ -13,6 +17,11 @@
 		<?php
 		wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
     </div>
+    <button class="hamburger hamburger--spin" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
     <div class="header__search">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
              width="20px" height="20px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve">
