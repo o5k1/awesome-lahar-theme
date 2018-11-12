@@ -23,6 +23,9 @@
                         <div class="home-grid__cell-post">
                             <div class="home-post__content">
                                 <div class="home-post__title"><?php the_title(); ?></div>
+	                            <?php if ( get_the_tags() ): ?>
+                                    <div>di <?php echo get_the_tags()[0]->name; ?></div>
+	                            <?php endif; ?>
                                 <div class="home-post__excerpt"><?php the_excerpt(); ?></div>
                             </div>
                         </div>
