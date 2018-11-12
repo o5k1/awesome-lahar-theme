@@ -58,6 +58,7 @@ button:focus {
     .search-form {
         top: 56px;
     }
+
     .search-form label {
         margin-top: 10%;
     }
@@ -170,7 +171,6 @@ input[type="search"]::-webkit-search-results-decoration {
         display: none;
     }
 }
-
 
 .menu--mobile li {
     padding: 16px 0;
@@ -467,7 +467,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .home-grid__cell:hover .home-grid__cell-post {
-    transform: translateY(8px);
+    transform: translateY(-8px);
 }
 
 .home-post__thumbnail {
@@ -516,7 +516,7 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 100%;
     position: relative;
     top: 0;
-    transition: .1s ease-in;
+    transition: .15s ease-in;
 }
 
 .home-other {
@@ -1065,13 +1065,16 @@ input.wpcf7-form-control.wpcf7-submit {
     .contatti-content #menu-social-menu, .contact-form__name {
         width: 100%;
     }
+
     .contact-form {
         width: 80%;
     }
+
     .contact-form__email {
         width: 100%;
         margin-left: 0;
     }
+
     .attachment img {
         max-width: 90%;
     }
@@ -1085,7 +1088,7 @@ input.wpcf7-form-control.wpcf7-submit {
 
 .error404 .body:before {
     content: '';
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     display: block;
     position: absolute;
     width: 100%;
