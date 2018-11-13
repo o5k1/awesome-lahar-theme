@@ -506,6 +506,10 @@ input[type="search"]::-webkit-search-results-decoration {
     height: auto;
 }
 
+.home-post__author {
+    font-size: 14px;
+}
+
 .home-post__excerpt {
     font-weight: 400;
     margin-top: 16px;
