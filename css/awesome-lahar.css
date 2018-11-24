@@ -345,6 +345,19 @@ input[type="search"]::-webkit-search-results-decoration {
     text-decoration: none;
 }
 
+@media only screen and (max-width: 400px) {
+    .home__collab-action {
+        border: 1px solid;
+        border-radius: 3px;
+        padding: 4px 8px;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 8px;
+        font-size: 16px;
+        text-transform: none;
+    }
+}
+
 .home__collab-action:after {
     content: '';
     width: 0;
