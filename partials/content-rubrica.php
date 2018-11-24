@@ -9,6 +9,9 @@ $coverImage = apply_filters( 'taxonomy-images-queried-term-image-object', '' );
     </div>
 </div>
 <div class="home__current-category">
+    <a href="<?php print get_permalink( get_page_by_path( 'rubriche' ) ); ?>" class="single-post__category">
+		Rubriche
+    </a>
     <h1 class="home__current-category-name">
 		<?php echo get_cat_name( $cat ) ?>
     </h1>

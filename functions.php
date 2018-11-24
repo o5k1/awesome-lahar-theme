@@ -51,6 +51,11 @@ function lahar_get_tag_slug( $title ) {
 	return str_replace( ' ', '-', strtolower( $title ) );
 }
 
+function lahar_get_category_father($category_id) {
+	$ancestors = get_ancestors( $category_id, 'category' );
+	return $ancestors[0];
+}
+
 function lahar_get_posts_by_tag( $slug ) {
 	return get_posts( array(
 			'posts_per_page' => - 1,

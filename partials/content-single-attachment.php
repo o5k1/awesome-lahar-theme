@@ -1,5 +1,12 @@
 <div class="single-post__wrapper">
     <div class="single-attachment__title-wrapper">
+	    <?php if ( ! empty( get_the_category() ) ):
+		    $current_category_id = get_theme_mod( 'current_mood_id' );
+		    $parent_link = ( get_the_category()[0]->term_id == $current_category_id ) ? get_home_url() : get_term_link( get_the_category()[0] ); ?>
+            <a href="<?php echo $parent_link; ?>" class="single-post__category">
+			    <?php echo get_the_category()[0]->name; ?>
+            </a>
+	    <?php endif; ?>
         <div class="single-attachment__title">
 			<?php the_title(); ?>
         </div>
