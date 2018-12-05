@@ -642,6 +642,10 @@ input[type="search"]::-webkit-search-results-decoration {
     top: 0;
 }
 
+.rubrica {
+    padding-bottom: 40px;
+}
+
 .home-other__item-title {
     position: absolute;
     top: 10px;
@@ -1235,4 +1239,33 @@ input.wpcf7-form-control.wpcf7-submit {
     cursor: pointer;
     vertical-align: middle;
     padding: 5px 8px;
+}
+
+.magazine-subscriber {
+    text-align: center;
+    float: left;
+    padding: 24px 16px;
+    background: black;
+    color: white;
+    width: calc(100% - 32px);
+    font-size: 18px;
+}
+
+.magazine-subscriber__content a {
+    font-size: 18px;
+    border-color: white;
+    text-transform: capitalize;
+    color: white;
+    margin-bottom: 0;
+    margin-right: 4px;
+}
+
+@media only screen and (max-width: 400px) {
+    .magazine-subscriber {
+        padding: 16px;
+    }
+
+    .magazine-subscriber, .magazine-subscriber__content a {
+        font-size: 16px;
+    }
 }

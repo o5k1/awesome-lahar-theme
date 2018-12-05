@@ -117,6 +117,7 @@ add_filter( 'pre_get_posts', 'search_filter' );
 
 /**
  * Adds "choose current mood" functionality to home page customizer.
+ * Adds "choose accent color" functionality to home page customizer.
  * @param $wp_customize
  */
 function lahar_customize_register( $wp_customize ) {
@@ -148,9 +149,31 @@ function lahar_customize_register( $wp_customize ) {
 		'label'           => __( 'Il mood da mostrare è' ),
 		'active_callback' => 'is_front_page',
 	) );
+
+	$wp_customize->add_setting( 'accent_color', array(
+		'type'                 => 'theme_mod', // or 'option'
+		'capability'           => 'edit_theme_options',
+		'theme_supports'       => '', // Rarely needed.
+		'default'              => '#000000',
+		'transport'            => 'refresh', // or postMessage
+		'sanitize_callback'    => '',
+		'sanitize_js_callback' => '', // Basically to_json.
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize,
+		'accent_color',
+		array(
+			'label'      => __( 'L\' <i>accent color</i> da usare è' ),
+			'section'    => 'static_front_page',
+			'priority'   => 20,
+			'active_callback' => 'is_front_page',
+		)
+	));
 }
 
 add_action( 'customize_register', 'lahar_customize_register' );
+
 
 
 
