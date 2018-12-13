@@ -12,11 +12,6 @@ jQuery(window).load(function () {
     itemSelector: '.home-grid__cell'
   });
 
-  jQuery('.archive-grid').masonry({
-    // options
-    itemSelector: '.archive-grid__item'
-  });
-
   var searchIconEl = jQuery('.header__search');
   var searchFormEl = jQuery('.search-form');
   var hamburgerEl = jQuery('.hamburger');

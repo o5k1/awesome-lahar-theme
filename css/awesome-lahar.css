@@ -644,7 +644,7 @@ input[type="search"]::-webkit-search-results-decoration {
     position: relative;
     text-align: center;
     text-decoration: none;
-    transition: .1s ease-in;
+    transition: .15s ease-in;
 }
 
 @media only screen and (max-width: 400px) {
@@ -879,6 +879,9 @@ input[type="search"]::-webkit-search-results-decoration {
     margin: 0 auto;
     max-width: 976px;
     padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 400px) {
@@ -891,6 +894,7 @@ input[type="search"]::-webkit-search-results-decoration {
     box-shadow: 0 0 30px 0 rgba(153, 153, 153, 1);
     margin: 16px;
     transition: .4s;
+    display: inline-block;
 }
 
 .archive-grid__item a {
