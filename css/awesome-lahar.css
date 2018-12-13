@@ -28,6 +28,58 @@ button:focus {
     outline: 0;
 }
 
+.lahar-button {
+    padding: 8px 16px;
+    border: 1px solid black;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    color: black;
+    text-decoration: none;
+}
+
+.lahar-button--white {
+    color: white;
+}
+
+.lahar-button:before {
+    transition: .3s ease-in;
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    background: black;
+    left: 0;
+    top: 0;
+}
+
+.lahar-button--white:before {
+    transition: .3s ease-in;
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    background: white;
+    left: 0;
+    top: 0;
+}
+
+.lahar-button:hover {
+    color: inherit;
+}
+
+.lahar-button:hover span {
+    transition: .3s ease-in;
+    display: inline-block;
+    transform: scale(1);
+}
+
+.lahar-button:hover:before {
+    width: 100%;
+}
+
 .search-form {
     top: 80px;
     position: fixed;
@@ -123,7 +175,7 @@ input[type="search"]::-webkit-search-results-decoration {
     padding: 15px 60px;
 }
 
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 890px) {
     .header {
         padding: 15px 20px;
         width: calc(100% - 40px);
@@ -166,7 +218,7 @@ input[type="search"]::-webkit-search-results-decoration {
     }
 }
 
-@media only screen and (min-width: 821px) {
+@media only screen and (min-width: 891px) {
     .menu--mobile {
         display: none;
     }
@@ -184,7 +236,7 @@ input[type="search"]::-webkit-search-results-decoration {
     top: 56px;
 }
 
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 890px) {
     .header__menu {
         display: none;
     }
@@ -229,7 +281,7 @@ input[type="search"]::-webkit-search-results-decoration {
     cursor: pointer;
 }
 
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 890px) {
     .header__search, .hamburger {
         float: right;
     }
@@ -239,7 +291,7 @@ input[type="search"]::-webkit-search-results-decoration {
     display: none;
 }
 
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 890px) {
     .hamburger {
         display: inline-block;
     }
@@ -331,23 +383,29 @@ input[type="search"]::-webkit-search-results-decoration {
     font-size: 56px;
     color: #333;
     text-transform: uppercase;
+
+    line-height: 63px;
+    margin: 16px 0 24px 0;
+}
+
+.home__issue-title-wrapper .home__issue-title {
+    line-height: initial;
+    margin: 0;
 }
 
 .home__collab-action {
     font-size: 15px;
-    background: transparent;
-    border: none;
-    color: #333;
     font-family: "Lato", sans-serif;
-    display: inline-block;
-    cursor: pointer;
     margin-right: 6px;
-    text-decoration: none;
+}
+
+.home__collab-action:hover {
+    color: white;
 }
 
 @media only screen and (max-width: 400px) {
     .home__collab-action {
-        border: 1px solid;
+        border: 1px solid black;
         border-radius: 3px;
         padding: 4px 8px;
         text-decoration: none;
@@ -356,15 +414,6 @@ input[type="search"]::-webkit-search-results-decoration {
         font-size: 16px;
         text-transform: none;
     }
-}
-
-.home__collab-action:after {
-    content: '';
-    width: 0;
-    background: black;
-    height: 2px;
-    display: block;
-    transition: .3s;
 }
 
 .home__collab-action:hover:after {
@@ -703,7 +752,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .single-post__category {
-    border: 1px solid;
+    border: 1px solid black;
     border-radius: 3px;
     padding: 4px 8px;
     text-decoration: none;
@@ -711,6 +760,10 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-bottom: 8px;
     font-size: 16px;
     text-transform: none;
+}
+
+.single-post__category:hover {
+    color: white;
 }
 
 .single-post__wrapper {
@@ -1244,7 +1297,7 @@ input.wpcf7-form-control.wpcf7-submit {
 .magazine-subscriber {
     text-align: center;
     float: left;
-    padding: 24px 16px;
+    padding: 16px;
     background: black;
     color: white;
     width: calc(100% - 32px);
@@ -1252,12 +1305,16 @@ input.wpcf7-form-control.wpcf7-submit {
 }
 
 .magazine-subscriber__content a {
-    font-size: 18px;
+    font-size: 16px;
     border-color: white;
     text-transform: capitalize;
     color: white;
     margin-bottom: 0;
     margin-right: 4px;
+}
+
+.magazine-subscriber__content-text {
+    color: white;
 }
 
 @media only screen and (max-width: 400px) {

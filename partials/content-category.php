@@ -7,8 +7,8 @@
         </div>
     </div>
     <div class="home__current-category">
-        <a href="<?php print get_permalink( get_page_by_path( 'archive' ) ); ?>" class="single-post__category">
-            Archivio
+        <a href="<?php print get_permalink( get_page_by_path( 'archive' ) ); ?>" class="lahar-button single-post__category">
+            <span>Archivio</span>
         </a>
         <h1 class="home__issue-title">#<?php echo get_cat_name( $cat ) ?></h1>
     </div>

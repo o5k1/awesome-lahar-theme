@@ -15,8 +15,8 @@
         <div class="home__issue-title-wrapper">
             <div class="home__issue-title">#<?php print $current_category_name ?></div>
 
-            <a href="<?php print get_permalink( get_page_by_path( 'collabora' ) ) ?>" class="home__collab-action">
-                Collabora al prossimo numero
+            <a href="<?php print get_permalink( get_page_by_path( 'collabora' ) ) ?>" class="lahar-button home__collab-action">
+                <span>Collabora al prossimo numero</span>
             </a>
         </div>
     </div>
