@@ -1,10 +1,11 @@
 <?php get_header(); ?>
-    <div class="body">
+    <div class="body rubriche">
 		<?php get_search_form(); ?>
         <div class="menu--mobile">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
         </div>
         <div class="home-other">
+            <h1 class="home-other__title">rubriche</h1>
             <div class="home-other-grid">
 				<?php
 				// Recupera tutte le categorie che rappresentano rubriche

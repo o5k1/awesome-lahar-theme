@@ -1,9 +1,10 @@
 <?php get_header(); ?>
-    <div class="body">
+    <div class="body archive">
 		<?php get_search_form(); ?>
         <div class="menu--mobile">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
         </div>
+        <h1 class="home-other__title">archivio</h1>
         <ul class="archive-grid">
 			<?php $terms = apply_filters( 'taxonomy-images-get-terms', '' );
 			if ( ! empty( $terms ) ) :

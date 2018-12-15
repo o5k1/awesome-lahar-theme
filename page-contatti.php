@@ -9,6 +9,7 @@
 		} ?>
         <div class="contatti__content">
             <div class="subsection">
+                <h1 class="subsection-title">Contatti</h1>
                 <div class="idea-editors">
                     <div class="contatti-content">
                         <ul id="menu-social-menu" class="menu">

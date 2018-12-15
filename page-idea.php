@@ -6,6 +6,7 @@
         </div>
         <div class="idea__content">
             <div class="subsection">
+                <h1 class="subsection-title">Progetto</h1>
                 <ul class="idea-group">
                     <li class="idea-item">
                         <div class="idea-item__button">

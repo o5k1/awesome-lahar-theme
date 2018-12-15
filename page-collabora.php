@@ -12,6 +12,9 @@ shuffle( $posts );
 			<?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
         </div>
         <div class="collaborate-content">
+            <div class="title">
+                <h1 class="home-other__title">collabora</h1>
+            </div>
 			<?php echo the_content() ?>
         </div>
     </div>
