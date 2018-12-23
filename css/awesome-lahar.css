@@ -2,7 +2,7 @@ body {
     color: #636363;
     line-height: 1.4;
     background: #f5f5f5;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 300;
     box-sizing: border-box;
 }
@@ -90,7 +90,7 @@ button:focus {
     transition: .6s;
     opacity: 0;
     visibility: hidden;
-    font-family: "Lato", sans-serif;
+    font-family: "Work Sans", sans-serif;
     display: block;
     text-align: center;
 }
@@ -124,7 +124,7 @@ button:focus {
     line-height: 1.6;
     text-transform: uppercase;
     margin-bottom: 10px;
-    font-family: "Lato", sans-serif;
+    font-family: "Work Sans", sans-serif;
 }
 
 input.search-field {
@@ -395,7 +395,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .home__collab-action {
     font-size: 15px;
-    font-family: "Lato", sans-serif;
+    font-family: "Work Sans", sans-serif;
     margin-right: 6px;
 }
 
