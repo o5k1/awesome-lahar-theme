@@ -4,6 +4,9 @@
         <div class="menu--mobile">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
         </div>
-		<?php get_template_part( 'partials/content-home' ) ?>
+        <img class="lahar-loader" src="<?php echo get_template_directory_uri(); ?>/img/loading.gif">
+        <div class="loadable-content">
+			<?php get_template_part( 'partials/content-home' ) ?>
+        </div>
     </div>
 <?php get_footer(); ?>

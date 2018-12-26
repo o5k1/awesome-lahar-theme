@@ -80,6 +80,13 @@ button:focus {
     width: 100%;
 }
 
+.lahar-loader {
+    width: 100px;
+    display: block;
+    margin: auto;
+    margin-top: calc(50vh - 80px);
+}
+
 .search-form {
     top: 80px;
     position: fixed;
@@ -423,7 +430,6 @@ input[type="search"]::-webkit-search-results-decoration {
 .body {
     position: relative;
     margin-top: 80px;
-    opacity: 0;
     transition: 1s;
     min-height: calc(100vh - 150px);
 }
@@ -500,7 +506,12 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-top: 26px;
 }
 
-.body--visible {
+.loadable-content{
+    opacity: 0;
+    transition: 1s;
+}
+
+.loadable-content--visible {
     opacity: 1;
 }
 

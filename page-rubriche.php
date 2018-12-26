@@ -4,29 +4,32 @@
         <div class="menu--mobile">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
         </div>
-        <div class="home-other">
-            <h1 class="home-other__title">rubriche</h1>
-            <div class="home-other-grid">
-				<?php
-				// Recupera tutte le categorie che rappresentano rubriche
-				$categories = get_categories(
-					array( 'parent' => get_cat_ID( 'Rubriche' ) )
-				);
+        <img class="lahar-loader" src="<?php echo get_template_directory_uri(); ?>/img/loading.gif">
+        <div class="loadable-content">
+            <div class="home-other">
+                <h1 class="home-other__title">rubriche</h1>
+                <div class="home-other-grid">
+					<?php
+					// Recupera tutte le categorie che rappresentano rubriche
+					$categories = get_categories(
+						array( 'parent' => get_cat_ID( 'Rubriche' ) )
+					);
 
-				foreach ( $categories as $index => $category ):?>
-                    <a href="<?php print get_category_link( $category ) ?>" class="home-other-grid__item">
-                        <div class="home-other-grid__item-background">
-							<?php $terms = apply_filters( 'taxonomy-images-get-terms', '', array(
-								'term_args' => [ 'term_taxonomy_id' => $category->term_id ]
-							) );
-							if ( ! empty( $terms ) ) {
-								print wp_get_attachment_image( $terms[0]->image_id, 'full' );
-							}
-							?>
-                            <div class="home-other__item-title"><?php print $category->name ?></div>
-                        </div>
-                    </a>
-				<?php endforeach; ?>
+					foreach ( $categories as $index => $category ):?>
+                        <a href="<?php print get_category_link( $category ) ?>" class="home-other-grid__item">
+                            <div class="home-other-grid__item-background">
+								<?php $terms = apply_filters( 'taxonomy-images-get-terms', '', array(
+									'term_args' => [ 'term_taxonomy_id' => $category->term_id ]
+								) );
+								if ( ! empty( $terms ) ) {
+									print wp_get_attachment_image( $terms[0]->image_id, 'full' );
+								}
+								?>
+                                <div class="home-other__item-title"><?php print $category->name ?></div>
+                            </div>
+                        </a>
+					<?php endforeach; ?>
+                </div>
             </div>
         </div>
     </div>

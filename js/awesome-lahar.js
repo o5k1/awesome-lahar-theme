@@ -2,7 +2,8 @@ jQuery(window).load(function () {
   /**
    * Make body appearing with a fade-in.
    */
-  jQuery('.body').addClass('body--visible');
+  jQuery('.loadable-content').addClass('loadable-content--visible');
+  jQuery('.lahar-loader').hide();
 
   /**
    * Masonry setup.
