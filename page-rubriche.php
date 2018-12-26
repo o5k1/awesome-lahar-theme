@@ -15,7 +15,7 @@
 
 				foreach ( $categories as $index => $category ):?>
                     <a href="<?php print get_category_link( $category ) ?>" class="home-other-grid__item">
-                        <div class="home-other-grid__item-hero">
+                        <div class="home-other-grid__item-background">
 							<?php $terms = apply_filters( 'taxonomy-images-get-terms', '', array(
 								'term_args' => [ 'term_taxonomy_id' => $category->term_id ]
 							) );
@@ -23,12 +23,7 @@
 								print wp_get_attachment_image( $terms[0]->image_id, 'full' );
 							}
 							?>
-                            <div class="home-other-grid__item-film"></div>
-                            <div>
-                                <div class="home-other__item-title">
-									<?php print $category->name ?>
-                                </div>
-                            </div>
+                            <div class="home-other__item-title"><?php print $category->name ?></div>
                         </div>
                     </a>
 				<?php endforeach; ?>

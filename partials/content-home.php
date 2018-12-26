@@ -15,7 +15,8 @@
         <div class="home__issue-title-wrapper">
             <div class="home__issue-title">#<?php print $current_category_name ?></div>
 
-            <a href="<?php print get_permalink( get_page_by_path( 'collabora' ) ) ?>" class="lahar-button home__collab-action">
+            <a href="<?php print get_permalink( get_page_by_path( 'collabora' ) ) ?>"
+               class="lahar-button home__collab-action">
                 <span>Collabora al prossimo numero</span>
             </a>
         </div>
@@ -49,9 +50,9 @@
                 <div class="home-grid__cell-post">
                     <div class="home-post__content">
                         <div class="home-post__title"><?php the_title(); ?></div>
-	                    <?php if ( get_the_tags() ): ?>
+						<?php if ( get_the_tags() ): ?>
                             <div class="home-post__author">di <?php echo get_the_tags()[0]->name; ?></div>
-	                    <?php endif; ?>
+						<?php endif; ?>
                         <div class="home-post__excerpt"><?php the_excerpt(); ?></div>
                     </div>
                 </div>
@@ -71,7 +72,7 @@
 
 		foreach ( $categories as $index => $category ):?>
             <a href="<?php print get_category_link( $category ) ?>" class="home-other-grid__item">
-                <div class="home-other-grid__item-hero">
+                <div class="home-other-grid__item-background">
 					<?php $terms = apply_filters( 'taxonomy-images-get-terms', '', array(
 						'term_args' => [ 'term_taxonomy_id' => $category->term_id ]
 					) );
@@ -79,7 +80,6 @@
 						print wp_get_attachment_image( $terms[0]->image_id, 'full' );
 					}
 					?>
-                    <div class="home-other-grid__item-film"></div>
                     <div class="home-other__item-title"><?php print $category->name ?></div>
                 </div>
             </a>
