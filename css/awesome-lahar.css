@@ -884,7 +884,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .single-attachment__title-wrapper {
     margin: 0 auto;
     max-width: 720px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .single-attachment__content {

@@ -3,6 +3,9 @@
 <div class="loadable-content">
     <div class="body">
 		<?php get_search_form() ?>
+        <div class="menu--mobile">
+		    <?php wp_nav_menu( array( 'theme_location' => 'primary-nav' ) ); ?>
+        </div>
         <div class="tag-title">
             <div class="tag-title__name">Risultati trovati per</div>
             <div class="tag-title__magazine">"<?php echo get_search_query(); ?>"</div>
