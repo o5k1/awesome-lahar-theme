@@ -506,7 +506,7 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-top: 26px;
 }
 
-.loadable-content{
+.loadable-content {
     opacity: 0;
     transition: 1s;
 }
@@ -869,6 +869,10 @@ input[type="search"]::-webkit-search-results-decoration {
     width: 100%;
 }
 
+.single-attachment {
+    background: white;
+}
+
 .single-attachment__title {
     font-size: 48px;
     text-transform: uppercase;
@@ -891,7 +895,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .single-attachment__content img {
     max-width: 100%;
     height: auto;
-    box-shadow: 0 0 50px 0 rgba(153, 153, 153, 0.6);
+    box-shadow: 0 0 20px 0 rgba(153, 153, 153, 0.6);
 }
 
 .issue-cover {
