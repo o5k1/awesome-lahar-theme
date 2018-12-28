@@ -414,10 +414,8 @@ input[type="search"]::-webkit-search-results-decoration {
     .home__collab-action {
         border: 1px solid black;
         border-radius: 3px;
-        padding: 4px 8px;
         text-decoration: none;
         display: inline-block;
-        margin-bottom: 8px;
         font-size: 16px;
         text-transform: none;
     }
@@ -748,7 +746,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .footer {
     float: left;
-    padding: 32px 0;
+    padding-bottom: 32px;
     width: 100%;
     text-align: center;
     justify-content: center;
@@ -1387,6 +1385,10 @@ input.wpcf7-form-control.wpcf7-submit {
 }
 
 /* Mailchimp newsletter subscription form */
+#mc_embed_signup {
+    margin-top: 32px;
+}
+
 #mc_embed_signup h2 {
     font-size: 24px;
     color: #333;
@@ -1417,13 +1419,18 @@ input.wpcf7-form-control.wpcf7-submit {
 }
 
 .magazine-subscriber {
-    text-align: center;
-    float: left;
+    text-align: right;
     padding: 16px;
     background: black;
     color: white;
     width: calc(100% - 32px);
-    font-size: 18px;
+}
+
+.magazine-subscriber__content {
+    margin: auto;
+    padding: 20px 60px;
+    max-width: 609px;
+    font-size: 16px;
 }
 
 .magazine-subscriber__content a {
@@ -1432,19 +1439,25 @@ input.wpcf7-form-control.wpcf7-submit {
     text-transform: capitalize;
     color: white;
     margin-bottom: 0;
-    margin-right: 4px;
 }
 
 .magazine-subscriber__content-text {
     color: white;
+    margin-bottom: 8px;
+    text-align: left;
+    line-height: 24px;
 }
 
 @media only screen and (max-width: 400px) {
     .magazine-subscriber {
-        padding: 16px;
+        text-align: center;
     }
 
-    .magazine-subscriber, .magazine-subscriber__content a {
-        font-size: 16px;
+    .magazine-subscriber__content {
+        padding: 20px;
+    }
+
+    .magazine-subscriber__content-text {
+        margin-bottom: 16px;
     }
 }
