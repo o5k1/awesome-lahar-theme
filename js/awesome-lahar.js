@@ -59,9 +59,8 @@ jQuery(window).load(function () {
 
   ideaButtonEl.click(function (e) {
     var targetEl = e.currentTarget;
-    console.log(e);
     jQuery(targetEl)
-      .next('.idea-item__accordion')
+      .parent('.idea-item')
       .toggleClass('idea-item__accordion--visible');
   });
 

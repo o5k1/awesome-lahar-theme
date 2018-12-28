@@ -11,7 +11,10 @@
                     <li class="idea-item">
                         <div class="idea-item__button">
                             <div class="idea-item__title">Tecnicamente</div>
-                            <div class="idea-item__expand-action">+</div>
+                            <div class="idea-item__expand-action">
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--open">+</span>
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--close">-</span>
+                            </div>
                         </div>
                         <div class="idea-item__accordion">
                             <p>
@@ -22,7 +25,10 @@
                     <li class="idea-item">
                         <div class="idea-item__button">
                             <div class="idea-item__title">Concretamente</div>
-                            <div class="idea-item__expand-action">+</div>
+                            <div class="idea-item__expand-action">
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--open">+</span>
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--close">-</span>
+                            </div>
                         </div>
                         <div class="idea-item__accordion">
                             <p>
@@ -33,7 +39,10 @@
                     <li class="idea-item">
                         <div class="idea-item__button">
                             <div class="idea-item__title">Paradossalmente</div>
-                            <div class="idea-item__expand-action">+</div>
+                            <div class="idea-item__expand-action">
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--open">+</span>
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--close">-</span>
+                            </div>
                         </div>
                         <div class="idea-item__accordion">
                             <p>
@@ -46,7 +55,10 @@
                     <li class="idea-item">
                         <div class="idea-item__button">
                             <div class="idea-item__title">Simbolicamente</div>
-                            <div class="idea-item__expand-action">+</div>
+                            <div class="idea-item__expand-action">
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--open">+</span>
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--close">-</span>
+                            </div>
                         </div>
                         <div class="idea-item__accordion">
                             <p>
@@ -59,7 +71,10 @@
                     <li class="idea-item">
                         <div class="idea-item__button">
                             <div class="idea-item__title">Realmente</div>
-                            <div class="idea-item__expand-action">+</div>
+                            <div class="idea-item__expand-action">
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--open">+</span>
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--close">-</span>
+                            </div>
                         </div>
                         <div class="idea-item__accordion">
                             <p>
@@ -71,7 +86,10 @@
                     <li class="idea-item">
                         <div class="idea-item__button">
                             <div class="idea-item__title">Virtualmente</div>
-                            <div class="idea-item__expand-action">+</div>
+                            <div class="idea-item__expand-action">
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--open">+</span>
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--close">-</span>
+                            </div>
                         </div>
                         <div class="idea-item__accordion">
                             <p>
@@ -83,7 +101,10 @@
                     <li class="idea-item">
                         <div class="idea-item__button">
                             <div class="idea-item__title">Amichevolmente</div>
-                            <div class="idea-item__expand-action">+</div>
+                            <div class="idea-item__expand-action">
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--open">+</span>
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--close">-</span>
+                            </div>
                         </div>
                         <div class="idea-item__accordion">
                             <p>
@@ -95,7 +116,10 @@
                     <li class="idea-item">
                         <div class="idea-item__button">
                             <div class="idea-item__title">Idealmente</div>
-                            <div class="idea-item__expand-action">+</div>
+                            <div class="idea-item__expand-action">
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--open">+</span>
+                                <span class="idea-item__expand-action-icon idea-item__expand-action-icon--close">-</span>
+                            </div>
                         </div>
                         <div class="idea-item__accordion">
                             <p>
